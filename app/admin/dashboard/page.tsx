@@ -89,12 +89,29 @@ export default function DashboardPage() {
         const chartAgg = last7Days.map(dateStr => {
           // Earnings
           const dayEarnings = (completedAppts || [])
-            .filter(a => a.start_time.startsWith(dateStr))
+            .filter(a => {
+              try {
+                // Güvenli tarih kontrolü: UTC'den yerel saate çevirerek karşılaştır
+                const appDate = new Date(a.start_time);
+                const appDateStr = appDate.toISOString().split('T')[0];
+                return appDateStr === dateStr || a.start_time.startsWith(dateStr);
+              } catch(e) {
+                return false;
+              }
+            })
             .reduce((sum, a) => sum + (Number(a.price) || 0), 0);
           
           // Expenses
           const dayExpenses = (expenses || [])
-            .filter(e => e.created_at.startsWith(dateStr))
+            .filter(e => {
+              try {
+                const expDate = new Date(e.created_at);
+                const expDateStr = expDate.toISOString().split('T')[0];
+                return expDateStr === dateStr || e.created_at.startsWith(dateStr);
+              } catch(e) {
+                return false;
+              }
+            })
             .reduce((sum, e) => {
               const price = Array.isArray(e.products) ? (e.products[0]?.price || 0) : ((e.products as any)?.price || 0);
               return sum + (Number(e.quantity) * Number(price));
