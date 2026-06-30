@@ -38,7 +38,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       
       <div className={`transition-all duration-300 ${sidebarOpen ? "lg:ml-[280px]" : ""}`}>
         <TopBar title={title} onMenuClick={() => setSidebarOpen(true)} />
-        <main className="p-6">
+        <main className="p-4 md:p-6 overflow-x-hidden">
           {children}
         </main>
       </div>
