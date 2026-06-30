@@ -89,9 +89,9 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         {/* Logo */}
         <div className="flex items-center justify-between px-6 h-16 border-b border-[#333333]">
           <div className="flex items-center gap-3">
-            <img loading="lazy" decoding="async" src="/logo.png" alt="BerberEskişehir Logo" className="h-10 object-contain" />
+            <img loading="lazy" decoding="async" src="/logo.png" alt="BerberOS Logo" className="h-10 object-contain" />
             <span className="text-xl font-bold text-white tracking-wide">
-              BerberEskişehir
+              BerberOS
             </span>
           </div>
           <button

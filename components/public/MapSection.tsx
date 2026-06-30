@@ -7,7 +7,7 @@ export default function MapSection() {
           <h2 className="section-title">Bizi Ziyaret Edin</h2>
           <div className="gold-divider"></div>
           <p className="section-subtitle">
-            Odunpazarı, Eskişehir — Kolayca ulaşabileceğiniz merkezi konumumuz.
+            Merkez, İstanbul — Kolayca ulaşabileceğiniz merkezi konumumuz.
           </p>
         </div>
       </div>
@@ -29,7 +29,7 @@ export default function MapSection() {
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="BerberEskişehir VIP Konum"
+          title="BerberOS Konum"
         />
 
         {/* Üstte gold gradient overlay */}
@@ -71,10 +71,10 @@ export default function MapSection() {
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               fontSize: '1.1rem', flexShrink: 0
             }}>📍</div>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', fontWeight: 700 }}>BerberEskişehir VIP</h3>
+            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.15rem', fontWeight: 700 }}>BerberOS</h3>
           </div>
           <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '1rem' }}>
-            Odunpazarı Mevkii, Eskişehir, Türkiye
+            Merkez Şube, İstanbul, Türkiye
           </p>
           <a
             href="https://share.google/22hQ1RUsFYY9RBSIO"

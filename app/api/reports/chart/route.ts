@@ -31,7 +31,7 @@ export async function GET(req: Request) {
     const seriesSet = new Set<string>();
 
     (appointments || []).forEach((app: any) => {
-      let groupKey = "Berber Eskişehir VIP";
+      let groupKey = "BerberOS";
       if (dimension === "BARBER") groupKey = app.barbers?.name || "Bilinmiyor";
       else if (dimension === "SERVICE") groupKey = app.services?.name || "Bilinmiyor";
 

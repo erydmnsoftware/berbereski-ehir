@@ -10,7 +10,7 @@ export default function AboutSection() {
             <div className="gold-divider" style={{ margin: '1.5rem 0' }}></div>
             
             <p style={{ color: 'var(--color-text-secondary)', marginBottom: '1.5rem', fontSize: '1.05rem', lineHeight: 1.8 }}>
-              Eskişehir'in kalbinde, sadece bir berber dükkanı değil, erkekler için özel bir yaşam alanı yarattık. VIP hizmet anlayışımızla sıradan bir saç kesimini bir deneyime dönüştürüyoruz.
+              Şehrin kalbinde, sadece bir berber dükkanı değil, erkekler için özel bir yaşam alanı yarattık. VIP hizmet anlayışımızla sıradan bir saç kesimini bir deneyime dönüştürüyoruz.
             </p>
             
             <p style={{ color: 'var(--color-text-secondary)', marginBottom: '2rem', fontSize: '1.05rem', lineHeight: 1.8 }}>
@@ -41,7 +41,7 @@ export default function AboutSection() {
             }}></div>
             <img loading="lazy" decoding="async" 
               src="/logo.png" 
-              alt="BerberEskişehir VIP" 
+              alt="BerberOS" 
               style={{ width: '70%', maxWidth: '400px', filter: 'drop-shadow(0 0 30px rgba(212, 168, 83, 0.3))' }} 
               className="animate-float"
             />

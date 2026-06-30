@@ -12,11 +12,11 @@ export default function MapSection() {
             allowFullScreen={false}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="BerberEskişehir VIP Google Maps"
+            title="BerberOS Google Maps"
           ></iframe>
           <div className="absolute top-4 left-4 bg-[#111111]/90 backdrop-blur border border-[#333333] p-4 rounded max-w-[280px]">
-            <h4 className="text-white font-medium mb-1">BerberEskişehir VIP</h4>
-            <p className="text-[#a0a0a0] text-[13px]">Odunpazarı, Eskişehir</p>
+            <h4 className="text-white font-medium mb-1">BerberOS</h4>
+            <p className="text-[#a0a0a0] text-[13px]">Merkez, İstanbul</p>
             <a 
               href="https://share.google/22hQ1RUsFYY9RBSIO" 
               target="_blank" 

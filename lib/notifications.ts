@@ -24,7 +24,7 @@ export async function sendEmail({
   
   try {
     const data = await resend.emails.send({
-      from: 'BerberEskişehir VIP <randevu@berbereskisehir.com>', // Note: the domain must be verified on Resend, else use a default testing domain like onboarding@resend.dev
+      from: 'BerberOS <randevu@berberos.com>', // Note: the domain must be verified on Resend, else use a default testing domain like onboarding@resend.dev
       to: [to],
       subject: subject,
       html: html,

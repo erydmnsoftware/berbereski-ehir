@@ -1,5 +1,5 @@
 -- =============================================
--- BerberEskişehir VIP System — Supabase Kurulum SQL
+-- BerberOS System — Supabase Kurulum SQL
 -- Bu dosyayı Supabase Dashboard > SQL Editor'de çalıştırın
 -- =============================================
 
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS salons (
   phone TEXT,
   email TEXT,
   address TEXT,
-  city TEXT DEFAULT 'Eskişehir',
+  city TEXT DEFAULT 'İstanbul',
   instagram TEXT,
   facebook TEXT,
   working_hours JSONB DEFAULT '{
@@ -266,7 +266,7 @@ CREATE POLICY "Public can view barber breaks" ON barber_breaks FOR SELECT TO ano
 -- =============================================
 
 INSERT INTO salons (id, name, phone, email, address, city, instagram) VALUES
-  ('11111111-1111-1111-1111-111111111111', 'BerberEskişehir VIP', '+90 222 000 0000', 'info@berbereskisehir.com', 'Odunpazarı, Eskişehir', 'Eskişehir', '@berbereskisehirvip')
+  ('11111111-1111-1111-1111-111111111111', 'BerberOS', '+90 222 000 0000', 'info@berberos.com', 'Merkez, İstanbul', 'İstanbul', '@berberosvip')
 ON CONFLICT DO NOTHING;
 
 INSERT INTO services (salon_id, name, description, duration_minutes, price, category, sort_order) VALUES

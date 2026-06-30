@@ -1,5 +1,5 @@
 -- =============================================
--- BerberEskişehir VIP System - Edge Functions / Cron
+-- BerberOS System - Edge Functions / Cron
 -- =============================================
 
 -- 1. 30 Gün Gelmeyenlere Hatırlatma (Cron Job)

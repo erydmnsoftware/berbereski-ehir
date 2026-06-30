@@ -28,7 +28,7 @@ export default function Navbar() {
     }}>
       <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-          <img loading="lazy" decoding="async" src="/logo.png" alt="BerberEskişehir VIP Logo" style={{ height: '40px', objectFit: 'contain' }} />
+          <img loading="lazy" decoding="async" src="/logo.png" alt="BerberOS Logo" style={{ height: '40px', objectFit: 'contain' }} />
         </Link>
 
         <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }} className="nav-links">

@@ -1,5 +1,5 @@
 -- =============================================
--- BerberEskişehir VIP System — Inventory & Stock Management
+-- BerberOS System — Inventory & Stock Management
 -- =============================================
 
 -- PRODUCTS

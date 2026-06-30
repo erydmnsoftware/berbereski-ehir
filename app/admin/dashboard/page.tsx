@@ -138,7 +138,7 @@ export default function DashboardPage() {
     <div>
       <div style={{ marginBottom: '2rem' }}>
         <h1 className="heading-lg" style={{ marginBottom: '0.25rem' }}>Özet</h1>
-        <p style={{ color: 'var(--color-text-secondary)' }}>BerberEskişehir VIP anlık durum raporu.</p>
+        <p style={{ color: 'var(--color-text-secondary)' }}>BerberOS anlık durum raporu.</p>
       </div>
 
       {/* Stats Grid */}

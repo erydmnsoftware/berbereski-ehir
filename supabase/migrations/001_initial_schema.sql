@@ -1,5 +1,5 @@
 -- =============================================
--- BerberEskişehir VIP System - Initial Schema
+-- BerberOS System - Initial Schema
 -- =============================================
 
 -- Enable required extensions
@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS salons (
   phone TEXT,
   email TEXT,
   address TEXT,
-  city TEXT DEFAULT 'Eskişehir',
+  city TEXT DEFAULT 'İstanbul',
   instagram TEXT,
   facebook TEXT,
   working_hours JSONB DEFAULT '{
@@ -256,7 +256,7 @@ CREATE TRIGGER appointment_completed_trigger
 
 -- Salon
 INSERT INTO salons (id, name, phone, email, address, city, instagram) VALUES
-  ('11111111-1111-1111-1111-111111111111', 'BerberEskişehir VIP', '+90 222 000 0000', 'info@berbereskisehir.com', 'Odunpazarı, Eskişehir', 'Eskişehir', '@berbereskisehirvip')
+  ('11111111-1111-1111-1111-111111111111', 'BerberOS', '+90 222 000 0000', 'info@berberos.com', 'Merkez, İstanbul', 'İstanbul', '@berberosvip')
 ON CONFLICT DO NOTHING;
 
 -- Hizmetler

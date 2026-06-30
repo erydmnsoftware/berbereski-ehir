@@ -170,7 +170,7 @@ export default function Hero() {
           <div className="hero-photo w-full h-[120%] -top-[10%] relative">
             <img loading="lazy" decoding="async"
               src="/images/hero-profile.jpg"
-              alt="BerberEskişehir VIP"
+              alt="BerberOS"
               className="w-full h-full object-cover"
             />
           </div>
@@ -180,10 +180,7 @@ export default function Hero() {
         <div className="lg:w-[45%] flex flex-col justify-center px-6 md:px-10 lg:pl-[60px] py-16 lg:py-0">
           <div>
             <h1 id="hero-title" className="text-[42px] sm:text-[56px] md:text-[72px] lg:text-[80px] font-light leading-[1.05] tracking-[-0.03em] text-white drop-shadow-lg [perspective:1000px]">
-              {splitText("Berber Eskişehir ")}
-              <span className="font-serif italic text-[#d4a853] inline-block ml-1 md:ml-2">
-                {splitText("VIP")}
-              </span>
+              {splitText("BerberOS")}
             </h1>
             
             {/* Gold Line */}
@@ -192,7 +189,7 @@ export default function Hero() {
             </div>
 
             <p className="hero-sub text-[16px] md:text-[18px] leading-[1.7] text-[#a0a0a0] max-w-[440px] mt-6 font-light">
-              Eskişehir'in premium erkek kuaföründe modern saç kesimi, uzman sakal bakımı ve eşsiz bir VIP hizmet deneyimi. Kalite, özgüven ve detaya önem veren erkekler için özel tasarlandı.
+              Şehrin premium erkek kuaföründe modern saç kesimi, uzman sakal bakımı ve eşsiz bir VIP hizmet deneyimi. Kalite, özgüven ve detaya önem veren erkekler için özel tasarlandı.
             </p>
 
             {/* Accordion */}
@@ -258,7 +255,7 @@ export default function Hero() {
                 <div>
                   <div className="text-[11px] text-[#6b6b6b] uppercase tracking-widest mb-1">Telefon / WhatsApp</div>
                   <a href="tel:+905551112233" className="text-[15px] font-light text-white group-hover:text-[#d4a853] transition-colors">
-                    0555 111 22 33
+                    0555 000 00 00
                   </a>
                 </div>
               </div>
@@ -275,7 +272,7 @@ export default function Hero() {
                     rel="noopener noreferrer"
                     className="text-[15px] font-light text-white group-hover:text-[#d4a853] transition-colors"
                   >
-                    Odunpazarı, Eskişehir
+                    Merkez, İstanbul
                   </a>
                 </div>
               </div>

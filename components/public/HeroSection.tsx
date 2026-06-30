@@ -36,7 +36,7 @@ export default function HeroSection() {
 
       <div className="container" style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: '800px' }}>
         <div className="animate-fade-in-up">
-          <span className="section-tag" style={{ marginBottom: '1.5rem' }}>Eskişehir'in En Prestijli Erkek Kuaförü</span>
+          <span className="section-tag" style={{ marginBottom: '1.5rem' }}>Şehrin En Prestijli Erkek Kuaförü</span>
           
           <h1 className="heading-display" style={{ marginBottom: '1.5rem', textShadow: '0 4px 20px rgba(0,0,0,0.5)' }}>
             Tarzınızı <span className="text-gradient-gold">Sanata</span> Dönüştürüyoruz

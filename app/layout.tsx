@@ -7,8 +7,8 @@ import SmoothScrollProvider from '@/components/providers/SmoothScrollProvider'
 import CustomCursor from '@/components/CustomCursor'
 
 export const metadata: Metadata = {
-  title: 'BerberEskişehir VIP | Premium Erkek Kuaförü',
-  description: 'Eskişehir\'in en prestijli erkek kuaförü. Modern saç kesimi, sakal tasarımı ve VIP cilt bakım hizmetleri.',
+  title: 'BerberOS | Premium Erkek Kuaförü',
+  description: 'İstanbul\'in en prestijli erkek kuaförü. Modern saç kesimi, sakal tasarımı ve VIP cilt bakım hizmetleri.',
 }
 
 export default function RootLayout({

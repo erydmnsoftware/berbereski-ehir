@@ -1,5 +1,5 @@
 -- =============================================
--- BerberEskişehir VIP System - RLS Policies
+-- BerberOS System - RLS Policies
 -- =============================================
 
 -- Enable RLS on all tables

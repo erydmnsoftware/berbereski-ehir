@@ -38,8 +38,8 @@ export default function Navigation() {
     >
       <div className="w-full max-w-[1280px] mx-auto px-5 md:px-10 flex items-center justify-between">
         <Link href="/" className="text-white font-medium text-[20px] tracking-[-0.02em] flex items-center gap-3">
-          <img loading="lazy" decoding="async" src="/logo.png" alt="BerberEskişehir Logo" className="h-16 object-contain" />
-          BerberEskişehir VIP
+          <img loading="lazy" decoding="async" src="/logo.png" alt="BerberOS Logo" className="h-16 object-contain" />
+          BerberOS
         </Link>
 
         {/* Desktop Nav */}

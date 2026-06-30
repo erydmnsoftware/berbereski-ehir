@@ -28,7 +28,7 @@ const gallery = [
   },
   {
     src: '/logo.png',
-    alt: 'BerberEskişehir VIP Logo',
+    alt: 'BerberOS Logo',
     span: true
   }
 ];

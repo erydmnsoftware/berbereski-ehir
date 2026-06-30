@@ -63,7 +63,7 @@ export default function About() {
             Hakkımızda
           </h2>
           <p className="text-[16px] leading-[1.65] text-[#a0a0a0] mt-5 max-w-[440px]">
-            BerberEskişehir VIP, geleneksel berber ustalığını modern bir konseptle birleştiren Eskişehir'in premium erkek kuaför salonudur. Amacımız sadece saç kesmek değil, rahat ve lüks bir ortamda kendinizi özel hissedeceğiniz bir deneyim sunmaktır.
+            BerberOS, geleneksel berber ustalığını modern bir konseptle birleştiren Şehrin premium erkek kuaför salonudur. Amacımız sadece saç kesmek değil, rahat ve lüks bir ortamda kendinizi özel hissedeceğiniz bir deneyim sunmaktır.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-12">
@@ -122,7 +122,7 @@ export default function About() {
                 <div className="flex-[0_0_100%] min-w-0 relative h-[450px] md:h-[550px]" key={index}>
                   <img loading="lazy" decoding="async"
                     src={src}
-                    alt={`Eskişehir Barber VIP Style ${index + 1}`}
+                    alt={`İstanbul Barber VIP Style ${index + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </div>

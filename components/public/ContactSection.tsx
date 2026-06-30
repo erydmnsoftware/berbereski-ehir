@@ -7,9 +7,9 @@ export default function ContactSection() {
         <div className="grid-3" style={{ marginBottom: 'var(--space-3xl)' }}>
           
           <div className="reveal">
-            <img loading="lazy" decoding="async" src="/logo.png" alt="BerberEskişehir VIP Logo" style={{ height: '60px', objectFit: 'contain', marginBottom: '1.5rem' }} />
+            <img loading="lazy" decoding="async" src="/logo.png" alt="BerberOS Logo" style={{ height: '60px', objectFit: 'contain', marginBottom: '1.5rem' }} />
             <p style={{ color: 'var(--color-text-secondary)', fontSize: '0.95rem', marginBottom: '1.5rem', lineHeight: 1.8 }}>
-              Eskişehir'in premium erkek kuaförü. Tarzınızı sanata dönüştüren usta eller, VIP hizmet anlayışıyla sizleri bekliyor.
+              Şehrin premium erkek kuaförü. Tarzınızı sanata dönüştüren usta eller, VIP hizmet anlayışıyla sizleri bekliyor.
             </p>
             <div style={{ display: 'flex', gap: '1rem' }}>
               <a href="#" className="social-link">Instagram</a>
@@ -24,7 +24,7 @@ export default function ContactSection() {
                 <span style={{ color: 'var(--color-gold)', fontSize: '1.25rem' }}>📍</span>
                 <div>
                   <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Adres</div>
-                  <div style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>Odunpazarı Mevkii,<br />Eskişehir, Türkiye</div>
+                  <div style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>Merkez Şube,<br />İstanbul, Türkiye</div>
                 </div>
               </div>
               <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
@@ -38,7 +38,7 @@ export default function ContactSection() {
                 <span style={{ color: 'var(--color-gold)', fontSize: '1.25rem' }}>✉️</span>
                 <div>
                   <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>E-posta</div>
-                  <div style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>info@berbereskisehir.com</div>
+                  <div style={{ color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>info@berberos.com</div>
                 </div>
               </div>
             </div>
@@ -69,7 +69,7 @@ export default function ContactSection() {
         </div>
         
         <div style={{ borderTop: '1px solid var(--color-border)', padding: '2rem 0', textAlign: 'center', color: 'var(--color-text-muted)', fontSize: '0.85rem' }}>
-          &copy; {new Date().getFullYear()} BerberEskişehir VIP. Tüm hakları saklıdır.
+          &copy; {new Date().getFullYear()} BerberOS. Tüm hakları saklıdır.
         </div>
       </div>
       

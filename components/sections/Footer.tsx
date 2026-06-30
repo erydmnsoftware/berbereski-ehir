@@ -7,14 +7,14 @@ export default function Footer() {
         {/* Left: Logo & Info */}
         <div>
           <span className="text-white font-medium text-[20px] tracking-[-0.02em] flex items-center gap-3">
-            <img loading="lazy" decoding="async" src="/logo.png" alt="BerberEskişehir Logo" className="h-16 object-contain" />
-            BerberEskişehir VIP
+            <img loading="lazy" decoding="async" src="/logo.png" alt="BerberOS Logo" className="h-16 object-contain" />
+            BerberOS
           </span>
           <p className="text-[14px] leading-[1.6] text-[#a0a0a0] mt-4 max-w-[280px]">
             Size en iyi hizmeti sunabilmemiz ve beklememeniz için randevu almanızı tavsiye ediyoruz.
           </p>
           <p className="text-[12px] text-[#6b6b6b] tracking-[0.02em] mt-8">
-            &copy; 2026 BerberEskişehir VIP. Tüm Hakları Saklıdır.
+            &copy; 2026 BerberOS. Tüm Hakları Saklıdır.
           </p>
         </div>
 

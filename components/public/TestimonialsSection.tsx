@@ -3,7 +3,7 @@ const testimonials = [
     id: 1,
     name: 'Ahmet Yılmaz',
     role: 'Düzenli Müşteri',
-    content: 'Eskişehir\'de gittiğim en iyi berber. VIP hizmeti gerçekten hissettiriyorlar. Temizlik ve hijyen üst düzeyde, çalışanlar çok ilgili.',
+    content: 'İstanbul\'de gittiğim en iyi berber. VIP hizmeti gerçekten hissettiriyorlar. Temizlik ve hijyen üst düzeyde, çalışanlar çok ilgili.',
     rating: 5
   },
   {

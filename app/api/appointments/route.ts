@@ -85,7 +85,7 @@ export async function POST(req: Request) {
     // 5. Send Notifications
     // SMS to Customer
     try {
-      const smsBody = `Sayın ${name}, ${date} saat ${time} için Berber Eskişehir VIP randevunuz başarıyla alınmıştır. İyi günler dileriz.`;
+      const smsBody = `Sayın ${name}, ${date} saat ${time} için BerberOS randevunuz başarıyla alınmıştır. İyi günler dileriz.`;
       await sendSMS({ to: phone, body: smsBody });
     } catch (e) {
       console.error("SMS Warning:", e);
@@ -95,7 +95,7 @@ export async function POST(req: Request) {
     if (email) {
       try {
         const emailHtml = `
-          <h3>Berber Eskişehir VIP - Randevu Onayı</h3>
+          <h3>BerberOS - Randevu Onayı</h3>
           <p>Sayın ${name}, randevunuz başarıyla oluşturuldu.</p>
           <p><strong>Tarih & Saat:</strong> ${date} ${time}</p>
           <p><strong>Hizmet:</strong> ${serviceData.name}</p>
@@ -103,7 +103,7 @@ export async function POST(req: Request) {
         `;
         await sendEmail({
           to: email,
-          subject: 'Berber Eskişehir VIP - Randevu Onayı',
+          subject: 'BerberOS - Randevu Onayı',
           html: emailHtml
         });
       } catch (e) {

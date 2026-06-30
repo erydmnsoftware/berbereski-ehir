@@ -84,7 +84,7 @@ export default function Appointment() {
             <div>
               <span className="text-[12px] text-[#6b6b6b]">Telefon / WhatsApp:</span>{' '}
               <a href="tel:+905551112233" className="text-[14px] text-white underline">
-                0555 111 22 33
+                0555 000 00 00
               </a>
             </div>
             <div>

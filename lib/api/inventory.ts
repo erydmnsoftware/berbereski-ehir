@@ -2,7 +2,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { Product, StockMovement } from "./types";
 import { supabase } from "@/lib/supabase";
 
-// For demo, we are hardcoding the salon_id for now as it's a single tenant app for BerberEskişehir VIP.
+// For demo, we are hardcoding the salon_id for now as it's a single tenant app for BerberOS.
 // In a multi-tenant app, this would come from auth context.
 const SALON_ID = "11111111-1111-1111-1111-111111111111";
 

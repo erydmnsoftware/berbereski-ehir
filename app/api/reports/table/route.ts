@@ -31,7 +31,7 @@ export async function GET(req: Request) {
 
     (appointments || []).forEach((app: any) => {
       let key = "Diğer";
-      if (dimension === "SHOP") key = "Berber Eskişehir VIP";
+      if (dimension === "SHOP") key = "BerberOS";
       else if (dimension === "BARBER") key = app.barbers?.name || "Bilinmiyor";
       else if (dimension === "SERVICE") key = app.services?.name || "Bilinmiyor";
       else if (dimension === "BOOKING_TYPE") key = app.source || "Online";

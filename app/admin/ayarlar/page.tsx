@@ -9,7 +9,7 @@ export default function AyarlarPage() {
     <div>
       <div style={{ marginBottom: '2rem' }}>
         <h1 className="heading-lg" style={{ marginBottom: '0.25rem' }}>Sistem Ayarları</h1>
-        <p style={{ color: 'var(--color-text-secondary)' }}>BerberEskişehir VIP sistem yapılandırması.</p>
+        <p style={{ color: 'var(--color-text-secondary)' }}>BerberOS sistem yapılandırması.</p>
       </div>
 
       <div className="grid-2">

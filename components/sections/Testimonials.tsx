@@ -6,7 +6,7 @@ import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 const testimonials = [
   {
     name: 'Ahmet Y.',
-    quote: "Serkan Mermer ve ekibi gerçekten işinin ehli. Yıllardır saçımı başka kimseye kestirmedim. Eskişehir'de VIP hizmet arayanlar için tek adres.",
+    quote: "Serkan Mermer ve ekibi gerçekten işinin ehli. Yıllardır saçımı başka kimseye kestirmedim. Şehirde VIP hizmet arayanlar için tek adres.",
     rating: 5,
     color: 'bg-[#4285F4]' // Google blue
   },
@@ -24,13 +24,13 @@ const testimonials = [
   },
   {
     name: 'Hakan M.',
-    quote: "Eskişehir'in en klas kuaför salonu. İçerideki atmosfer, dekorasyon ve müzikler çok başarılı. Kendinizi çok özel hissediyorsunuz.",
+    quote: "Şehrin en klas kuaför salonu. İçerideki atmosfer, dekorasyon ve müzikler çok başarılı. Kendinizi çok özel hissediyorsunuz.",
     rating: 5,
     color: 'bg-[#F4B400]' // Google yellow
   },
   {
     name: 'Sinan E.',
-    quote: "Uzun süredir Eskişehir'de profesyonel bir kuaför arıyordum, BerberEskişehir VIP beklentilerimin çok ötesinde. Herkese tavsiye ederim.",
+    quote: "Uzun süredir Şehirde profesyonel bir kuaför arıyordum, BerberOS beklentilerimin çok ötesinde. Herkese tavsiye ederim.",
     rating: 5,
     color: 'bg-[#4285F4]'
   }
