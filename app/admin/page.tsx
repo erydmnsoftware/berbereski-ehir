@@ -41,67 +41,63 @@ export default function Dashboard() {
     setCurrentMonthName(now.toLocaleDateString("tr-TR", { month: "long", year: "numeric" }));
 
     async function loadDashboard() {
-      // Fetch Recent Appointments
-      const { data: appointments } = await supabase
-        .from('appointments')
-        .select(`
-          id, start_time, created_at, status, price,
-          customers (id, name, phone)
-        `)
-        .order('start_time', { ascending: false });
+      try {
+        // Fetch Recent Appointments from robust Next.js API
+        const res = await fetch('/api/admin/data?type=appointments', { cache: 'no-store' });
+        const json = await res.json();
+        const appointments = json.data;
 
-      if (appointments) {
-        // Calculate KPIs
-        const completedAppointments = appointments.filter(a => a.status === 'completed');
-        const totalRevenue = completedAppointments.reduce((acc, curr) => acc + (curr.price || 0), 0);
-        
-        const uniqueCustomers = new Set(appointments.map(a => {
-          const cust = a.customers as any;
-          return cust?.id;
-        }).filter(Boolean));
-        
-        setSummary({ totalRevenue, revenueChange: 0 }); // real data, static change for now
-        setKpiData({
-          newOrders: appointments.length, orderChange: 0,
-          uniqueVisitors: uniqueCustomers.size, visitorChange: 0,
-          newUsers: uniqueCustomers.size, userChange: 0
-        });
+        if (appointments && appointments.length > 0) {
+          // Calculate KPIs
+          const completedAppointments = appointments.filter((a: any) => a.status === 'completed');
+          const totalRevenue = completedAppointments.reduce((acc: number, curr: any) => acc + (Number(curr.price) || 0), 0);
+          
+          const uniqueCustomers = new Set(appointments.map((a: any) => {
+            const cust = a.customers as any;
+            return cust?.id;
+          }).filter(Boolean));
+          
+          setSummary({ totalRevenue, revenueChange: 0 }); // real data, static change for now
+          setKpiData({
+            newOrders: appointments.length, orderChange: 0,
+            uniqueVisitors: uniqueCustomers.size, visitorChange: 0,
+            newUsers: uniqueCustomers.size, userChange: 0
+          });
 
-        // Set Recent Transactions
-        const txs = appointments.slice(0, 10).map(app => {
-          const cust = app.customers as any;
-          return {
-            id: app.id,
-            clientName: cust?.name || "Bilinmiyor",
-            date: app.start_time,
-            createdAt: app.created_at,
-            status: app.status
-          };
-        });
-        setRecentTx(txs);
+          // Set Recent Transactions
+          const txs = appointments.slice(0, 10).map((app: any) => {
+            const cust = app.customers as any;
+            return {
+              id: app.id,
+              clientName: cust?.name || "Bilinmiyor",
+              date: app.start_time,
+              createdAt: app.created_at,
+              status: app.status
+            };
+          });
+          setRecentTx(txs);
 
-        // Generate Chart Data from real appointments
-        const revenueMap: Record<string, number> = {};
-        completedAppointments.forEach(app => {
-          const dateStr = new Date(app.start_time).toISOString().split('T')[0];
-          revenueMap[dateStr] = (revenueMap[dateStr] || 0) + (app.price || 0);
-        });
+          // Generate Chart Data from real appointments
+          const revenueMap: Record<string, number> = {};
+          completedAppointments.forEach((app: any) => {
+            const dateStr = new Date(app.start_time).toISOString().split('T')[0];
+            revenueMap[dateStr] = (revenueMap[dateStr] || 0) + (Number(app.price) || 0);
+          });
 
-        const sortedDates = Object.keys(revenueMap).sort();
-        const generatedRevenue = sortedDates.map(date => ({
-          date,
-          revenue: revenueMap[date]
-        }));
-        
-        setRevenueData(generatedRevenue.length > 0 ? generatedRevenue : [{ date: now.toISOString().split('T')[0], revenue: 0 }]);
-        
-        // Fetch expense data from stock_movements (RESTOCK purchases)
-        const { data: stockMovements } = await supabase
-          .from('stock_movements')
-          .select(`quantity, created_at, products (price)`)
-          .eq('type', 'RESTOCK');
-        
-        if (stockMovements && stockMovements.length > 0) {
+          const sortedDates = Object.keys(revenueMap).sort();
+          const generatedRevenue = sortedDates.map(date => ({
+            date,
+            revenue: revenueMap[date]
+          }));
+          
+          setRevenueData(generatedRevenue.length > 0 ? generatedRevenue : [{ date: now.toISOString().split('T')[0], revenue: 0 }]);
+          
+          // Fetch expense data from API
+          const expRes = await fetch('/api/admin/data?type=stock_movements', { cache: 'no-store' });
+          const expJson = await expRes.json();
+          const stockMovements = expJson.data;
+          
+          if (stockMovements && stockMovements.length > 0) {
           const expenseMap: Record<string, number> = {};
           stockMovements.forEach((sm: any) => {
             const dateStr = new Date(sm.created_at).toISOString().split('T')[0];
@@ -114,11 +110,19 @@ export default function Dashboard() {
             amount: expenseMap[date]
           }));
           setExpenseData(generatedExpenses.length > 0 ? generatedExpenses : [{ date: now.toISOString().split('T')[0], amount: 0 }]);
+          } else {
+            setExpenseData([{ date: now.toISOString().split('T')[0], amount: 0 }]);
+          }
         } else {
+          // Safe 0 defaults
+          setSummary({ totalRevenue: 0, revenueChange: 0 });
+          setKpiData({ newOrders: 0, orderChange: 0, uniqueVisitors: 0, visitorChange: 0, newUsers: 0, userChange: 0 });
+          setRecentTx([]);
+          setRevenueData([{ date: now.toISOString().split('T')[0], revenue: 0 }]);
           setExpenseData([{ date: now.toISOString().split('T')[0], amount: 0 }]);
         }
-      } else {
-        // Safe 0 defaults
+      } catch (err) {
+        console.error("Dashboard API error:", err);
         setSummary({ totalRevenue: 0, revenueChange: 0 });
         setKpiData({ newOrders: 0, orderChange: 0, uniqueVisitors: 0, visitorChange: 0, newUsers: 0, userChange: 0 });
         setRecentTx([]);

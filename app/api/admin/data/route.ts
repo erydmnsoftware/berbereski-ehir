@@ -40,13 +40,18 @@ export async function GET(req: Request) {
 
     if (type === 'appointments') {
       let query = supabase.from('appointments').select(`
-        id, start_time, status, barber_id, service_id,
-        customers (name, phone)
-      `);
+        id, start_time, created_at, status, price, barber_id, service_id,
+        customers (id, name, phone)
+      `).order('start_time', { ascending: false });
       if (start) query = query.gte('start_time', start);
       if (end) query = query.lte('start_time', end);
       
       const { data } = await query;
+      return NextResponse.json({ data }, { headers: { 'Cache-Control': 'no-store, max-age=0' } });
+    }
+
+    if (type === 'stock_movements') {
+      const { data } = await supabase.from('stock_movements').select(`quantity, created_at, type, products (price)`).eq('type', 'RESTOCK');
       return NextResponse.json({ data }, { headers: { 'Cache-Control': 'no-store, max-age=0' } });
     }
 
