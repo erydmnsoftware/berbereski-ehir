@@ -179,9 +179,9 @@ export default function Hero() {
         {/* Right: Content */}
         <div className="lg:w-[45%] flex flex-col justify-center px-6 md:px-10 lg:pl-[60px] py-16 lg:py-0">
           <div>
-            <h1 id="hero-title" className="text-[56px] md:text-[72px] lg:text-[80px] font-light leading-[1.05] tracking-[-0.03em] text-white drop-shadow-lg [perspective:1000px]">
+            <h1 id="hero-title" className="text-[42px] sm:text-[56px] md:text-[72px] lg:text-[80px] font-light leading-[1.05] tracking-[-0.03em] text-white drop-shadow-lg [perspective:1000px]">
               {splitText("Berber Eskişehir ")}
-              <span className="font-serif italic text-[#d4a853] inline-block ml-2">
+              <span className="font-serif italic text-[#d4a853] inline-block ml-1 md:ml-2">
                 {splitText("VIP")}
               </span>
             </h1>
